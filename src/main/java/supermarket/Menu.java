@@ -147,12 +147,12 @@ public class Menu {
         while (true) {
           System.out.print("Quantity: ");
           quantity = input.nextInt();
-          totalQuantity += quantity;
           if (quantity <= prod.getQuantity()) {
             purchase[0] = id;
             purchase[1] = quantity;
             basket.add(purchase);
             prod.setQuantity(prod.getQuantity() - quantity);
+            totalQuantity += quantity;
             break;
           } else {
             System.out.printf("Not enough stock. ");
